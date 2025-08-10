@@ -1,0 +1,202 @@
+Index.html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Lloyd’s Dream — Discipline. Grind. Thrive.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Lloyd’s Dream — premium black & gold fitness wallpapers and motivational visuals. Discipline. Grind. Thrive." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Lloyd’s Dream — Discipline. Grind. Thrive.">
+  <meta property="og:description" content="Premium fitness wallpapers + reels built on discipline and the grind.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Lloyd%27s+Dream">
+  <style>
+    :root{
+      --bg:#000; --gold:#FFD700; --gold-soft:#d4af37; --text:#f6f6f6; --muted:#b8b8b8;
+      --card:#0b0b0b; --accent:#131313; --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}
+    a{color:var(--text);text-decoration:none}
+    .wrap{max-width:1100px;margin:auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo-ring{width:42px;height:42px;border-radius:50%;border:3px solid var(--gold);box-shadow:inset 0 0 0 2px rgba(0,0,0,.5)}
+    .brand h1{font-size:1.05rem;letter-spacing:.06em;margin:0;font-weight:800}
+    .cta-nav a{border:1.5px solid var(--gold);padding:10px 14px;border-radius:999px}
+    .cta-nav a:hover{background:var(--gold);color:#111}
+    .hero{position:relative;isolation:isolate;border-radius:var(--radius);padding:56px;overflow:hidden;background:
+      radial-gradient(1200px 500px at 50% 110%, rgba(212,175,55,.22), transparent 60%),
+      linear-gradient(180deg,#0a0a0a, #000 40%, #000 100%)}
+    .hero:before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:
+      linear-gradient(135deg,rgba(255,215,0,.55),rgba(255,215,0,0) 25%,rgba(255,215,0,.35) 60%,rgba(255,215,0,0));
+      -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+    .hero h2{font-size:clamp(28px,4.4vw,54px);margin:0 0 8px;font-weight:800;letter-spacing:.02em}
+    .hero p{max-width:700px;color:var(--muted);margin:0 0 24px}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;border-radius:10px;padding:14px 18px;font-weight:700;border:1.5px solid var(--gold);transition:.2s;box-shadow:var(--shadow)}
+    .btn.gold{background:var(--gold);color:#111;border-color:var(--gold)}
+    .btn:hover{transform:translateY(-1px);filter:saturate(1.1)}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .badge{font-size:.78rem;border:1px solid #222;padding:6px 10px;border-radius:999px;background:var(--accent);color:var(--muted)}
+    .section{margin-top:48px}
+    .section h3{font-size:1.4rem;margin:0 0 10px;font-weight:800}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{grid-column:span 12;background:var(--card);border-radius:var(--radius);padding:18px;border:1px solid #121212;box-shadow:var(--shadow)}
+    @media(min-width:720px){.card{grid-column:span 6}}
+    .card h4{margin:10px 0 2px;font-size:1.08rem}
+    .card p{margin:6px 0 10px;color:var(--muted)}
+    .thumb{aspect-ratio:16/9;border-radius:10px;background:#111 url('https://via.placeholder.com/800x450/0a0a0a/FFFFFF?text=Preview') center/cover no-repeat;border:1px solid #181818;position:relative;overflow:hidden}
+    .thumb.tag:after{content:"MOST POPULAR";position:absolute;top:10px;left:-10px;background:var(--gold);color:#111;font-weight:800;padding:6px 10px;border-radius:6px;transform:skew(-8deg)}
+    .price{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+    .price strong{font-size:1.2rem;color:var(--gold)}
+    .mini{opacity:.9}
+    .features{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:10px}
+    .pill{grid-column:span 6;border:1px solid #202020;border-radius:999px;padding:10px 12px;background:#0a0a0a;color:#d7d7d7;font-size:.9rem}
+    .marquee{margin-top:10px;color:#9e9e9e;font-size:.9rem}
+    .split{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:960px){.split{grid-template-columns:1.2fr .8fr}}
+    .panel{background:var(--card);border:1px solid #121212;border-radius:var(--radius);padding:18px}
+    .list{margin:0;padding-left:18px;color:#cfcfcf}
+    .testi{display:flex;flex-direction:column;gap:12px}
+    .quote{background:#0b0b0b;border:1px solid #171717;padding:14px;border-radius:12px}
+    .foot{margin-top:42px;padding:22px 0;color:#9a9a9a;border-top:1px solid #141414;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+    .socials a{opacity:.85}
+    .socials a:hover{opacity:1}
+    .sr-only{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+  </style>
+</head>
+<body>
+  <header class="wrap nav" aria-label="Primary">
+    <div class="brand">
+      <div class="logo-ring" aria-hidden="true"></div>
+      <h1>Lloyd’s Dream</h1>
+    </div>
+    <nav class="cta-nav">
+      <a href="#shop" aria-label="Skip to shop">Shop Now</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <h2>Discipline. Grind. Thrive.</h2>
+      <p>Premium black &amp; gold fitness wallpapers and visuals for people who train like their future depends on it. Built for phones, tablets, desktops, and TVs.</p>
+      <div class="hero-cta">
+        <a class="btn gold" href="#shop">Shop Wallpapers</a>
+        <a class="btn" href="#about">Why Lloyd’s Dream?</a>
+      </div>
+      <div class="badges" role="group" aria-label="Highlights">
+        <span class="badge">4K &amp; 9:16 Mobile</span>
+        <span class="badge">Lifetime Access</span>
+        <span class="badge">Black &amp; Gold Aesthetic</span>
+        <span class="badge">Made for Discipline</span>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="section" id="shop" aria-labelledby="h-shop">
+      <h3 id="h-shop">Shop</h3>
+      <div class="grid">
+        <!-- FULL PACK -->
+        <article class="card" aria-labelledby="p1-title">
+          <div class="thumb tag" role="img" aria-label="Full Pack preview"></div>
+          <h4 id="p1-title">Full Pack — Ultimate Discipline Set</h4>
+          <p>All categories: Gym Power, Urban Hustle, Nature Flow, Epic Abstracts. Phone, Desktop, Tablet &amp; TV sizes. Watermark-free downloads.</p>
+          <div class="features">
+            <div class="pill">✓ 40+ Wallpapers</div>
+            <div class="pill">✓ iPhone &amp; Android mockups</div>
+            <div class="pill">✓ Desktop 4K</div>
+            <div class="pill">✓ Lifetime Updates</div>
+          </div>
+          <div class="price">
+            <strong>$3.99</strong>
+            <div class="hero-cta">
+              <a class="btn gold" href="YOUR_PAYPAL_LINK_HERE" aria-label="Buy Full Pack via PayPal">Buy Now</a>
+              <a class="btn" href="YOUR_STRIPE_LINK_HERE" aria-label="Buy Full Pack via card">Card</a>
+            </div>
+          </div>
+          <div class="marquee">Includes “Most Popular” picks from each category.</div>
+        </article>
+
+        <!-- MINI PACK -->
+        <article class="card mini" aria-labelledby="p2-title">
+          <div class="thumb" role="img" aria-label="Mini Pack preview"></div>
+          <h4 id="p2-title">Mini Pack — Starter Set</h4>
+          <p>Curated selection across all 4 categories. Perfect if you want the vibe without the full library.</p>
+          <div class="features">
+            <div class="pill">✓ 12+ Wallpapers</div>
+            <div class="pill">✓ 9:16 Mobile</div>
+            <div class="pill">✓ iPhone &amp; Android</div>
+            <div class="pill">✓ Instant Download</div>
+          </div>
+          <div class="price">
+            <strong>$1.99</strong>
+            <div class="hero-cta">
+              <a class="btn gold" href="YOUR_PAYPAL_LINK_HERE_MINI" aria-label="Buy Mini Pack via PayPal">Buy Now</a>
+              <a class="btn" href="YOUR_STRIPE_LINK_HERE_MINI" aria-label="Buy Mini Pack via card">Card</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CATEGORIES PREVIEW -->
+    <section class="section" aria-labelledby="h-cats">
+      <h3 id="h-cats">Categories</h3>
+      <div class="grid">
+        <article class="card" aria-labelledby="c1"><h4 id="c1">🏋️ Gym Power</h4><p>Steel. Chalk. Focus. Designed for the ones who show up.</p></article>
+        <article class="card" aria-labelledby="c2"><h4 id="c2">🌆 Urban Hustle</h4><p>City nights &amp; skyline ambition.</p></article>
+        <article class="card" aria-labelledby="c3"><h4 id="c3">🌿 Nature Flow</h4><p>Calm strength. Mountains, oceans, forests.</p></article>
+        <article class="card" aria-labelledby="c4"><h4 id="c4">⚡ Epic Abstracts</h4><p>Bold shapes. Cinematic gradients. Black &amp; gold energy.</p></article>
+      </div>
+    </section>
+
+    <!-- WHY / ABOUT -->
+    <section class="section split" id="about" aria-labelledby="h-about">
+      <div class="panel">
+        <h3 id="h-about">Built on Discipline</h3>
+        <ul class="list">
+          <li>Designed for clarity on mobile &amp; desktop</li>
+          <li>Subtle gold — premium, not flashy</li>
+          <li>Mixed mockups (iPhone &amp; Android)</li>
+          <li>Watermark stays on previews only</li>
+        </ul>
+      </div>
+      <div class="panel testi" aria-label="Testimonials">
+        <div class="quote">“Every time I unlock my phone, I remember why I’m grinding.” — J.</div>
+        <div class="quote">“Clean, powerful, and it actually makes me want to work.” — M.</div>
+      </div>
+    </section>
+
+    <!-- CONTACT / NEWSLETTER -->
+    <section class="section" aria-labelledby="h-contact">
+      <h3 id="h-contact">Stay in the Loop</h3>
+      <div class="panel">
+        <form action="https://formspree.io/f/your-id" method="POST" aria-label="Subscribe form">
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="Enter your email for new drops" required
+                 style="width:100%;padding:14px 16px;border-radius:10px;border:1px solid #1b1b1b;background:#0a0a0a;color:#f5f5f5;margin-bottom:10px">
+          <button class="btn gold" type="submit">Get Updates</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <small>© <span id="yr"></span> Lloyd’s Dream — Respect the grind. Carry the dream.</small>
+      <div class="socials" aria-label="Social links">
+        <a href="https://instagram.com/simba_rr19.1">Instagram</a> •
+        <a href="https://www.tiktok.com/@ld_empire1">TikTok</a> •
+        <a href="https://youtube.com/@ld_empire1">YouTube</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
